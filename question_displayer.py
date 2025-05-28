@@ -16,3 +16,5 @@ class QuestionDisplayer:
         choice_letters = ["A", "B", "C", "D"]  
         for index, choice_text in enumerate(question_data["choices"]):
             choices_table.add_row(choice_letters[index], choice_text)
+        
+        self.console.print(choices_table) 
