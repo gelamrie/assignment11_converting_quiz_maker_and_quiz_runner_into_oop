@@ -18,3 +18,6 @@ class Question:
 
         while True:                               
             self.correct_answer = input(Fore.GREEN + "Which one is the correct answer? (a/b/c/d): ")
+            if self.correct_answer in self.choices_dictionary:
+                break
+            print(Fore.RED + "❌ Invalid input. Please choose from a, b, c, or d.")
