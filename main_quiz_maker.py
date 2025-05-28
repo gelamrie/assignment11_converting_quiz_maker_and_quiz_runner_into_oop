@@ -15,3 +15,6 @@ class MainQuizMaker:
             add_more_questions = input(Fore.CYAN + "Add another question? (y/n): ").strip().lower()
             if add_more_questions != 'y':
                 break
+
+        print(Fore.GREEN + f"\n✅ All questions saved to '{question_manager.file_name}'")
+        question_manager.print_session_preview()
