@@ -12,3 +12,6 @@ class QuestionManager:
         question = Question()
         question_block = question.get_question_block()
         self.all_questions_this_session.append(question_block)   
+
+        with open(self.file_name, "a", encoding="utf-8") as quiz_file:
+            quiz_file.write(question_block)
