@@ -21,3 +21,5 @@ class Question:
             if self.correct_answer in self.choices_dictionary:
                 break
             print(Fore.RED + "❌ Invalid input. Please choose from a, b, c, or d.")
+
+        return self.format_question()
