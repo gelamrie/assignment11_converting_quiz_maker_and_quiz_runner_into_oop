@@ -18,3 +18,6 @@ class MainQuizMaker:
 
         print(Fore.GREEN + f"\n✅ All questions saved to '{question_manager.file_name}'")
         question_manager.print_session_preview()
+
+if __name__ == "__main__":                       
+    MainQuizMaker().run()
