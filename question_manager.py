@@ -15,3 +15,9 @@ class QuestionManager:
 
         with open(self.file_name, "a", encoding="utf-8") as quiz_file:
             quiz_file.write(question_block)
+    
+    def print_session_preview(self):            
+        print(Fore.YELLOW + "\n📋 Here's a preview of your questions from this session:\n")
+        for question in self.all_questions_this_session:
+            print(Fore.WHITE + question)
+            print(Fore.LIGHTBLACK_EX + "-" * 50)
