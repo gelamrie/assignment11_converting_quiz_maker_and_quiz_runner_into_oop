@@ -6,3 +6,4 @@ class QuestionManager:
         if not file_name.endswith(".txt"):    
             file_name += ".txt"
         self.file_name = file_name
+        self.all_questions_this_session = []     
