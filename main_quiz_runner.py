@@ -11,3 +11,10 @@ class MainQuizRunner:
         self.file_chooser = FileChooser()
         self.question_loader = QuestionLoader()
         self.quiz = Quiz()
+
+    def run(self):  # feat: main flow of app
+        self.typewriter.type_writer(
+            "\n🎉 Welcome to the Quiz Game! Test your knowledge and have fun!\n", delay=0.05
+        )
+
+        
