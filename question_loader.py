@@ -10,3 +10,8 @@ class QuestionLoader:
 
         question_list = []  
         line_index = 0  
+
+        while line_index + 7 < len(raw_lines):  
+            if raw_lines[line_index] == "":  
+                line_index += 1
+                continue
