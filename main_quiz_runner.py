@@ -31,3 +31,5 @@ class MainQuizRunner:
         except Exception as error:
             self.console.print(f"[bold red]❌ Error: {error}[/bold red]")  
 
+if __name__ == "__main__":  
+    MainQuizRunner().run()
