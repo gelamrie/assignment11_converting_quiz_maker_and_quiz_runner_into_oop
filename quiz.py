@@ -17,3 +17,7 @@ class Quiz:
             self.question_displayer.display_question(question_data, question_number)
             user_letter = self.answer_prompt.prompt_user_for_answer()
 
+            if user_letter == "Q":  
+                self.console.print("[bold cyan]👋 You chose to quit the quiz early.[/bold cyan]\n")
+                break
+
