@@ -23,3 +23,9 @@ class Question:
             print(Fore.RED + "❌ Invalid input. Please choose from a, b, c, or d.")
 
         return self.format_question()
+    
+    def format_question(self):                   
+        return (f"Category: {self.category}\n"
+                f"Question: {self.question}\n" +
+                ''.join(f"{option}) {self.choices_dictionary[option]}\n" for option in ['a', 'b', 'c', 'd']) +
+                f"Answer: {self.correct_answer}\n\n")  
