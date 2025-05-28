@@ -8,3 +8,7 @@ class Quiz:
         self.console = Console()
         self.question_displayer = QuestionDisplayer()
         self.answer_prompt = AnswerPrompt()
+    
+    def start_quiz(self, questions):  
+        score = 0  
+        random.shuffle(questions)  
