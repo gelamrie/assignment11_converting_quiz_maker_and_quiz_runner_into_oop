@@ -6,3 +6,6 @@ class Question:
         self.question = ""
         self.choices_dictionary = {}
         self.correct_answer = ""
+    
+    def get_question_block(self):
+        print(Fore.CYAN + "\n=== New Question ===")
