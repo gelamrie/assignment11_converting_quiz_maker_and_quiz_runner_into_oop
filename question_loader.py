@@ -15,3 +15,9 @@ class QuestionLoader:
             if raw_lines[line_index] == "":  
                 line_index += 1
                 continue
+
+            try:
+                category_line = raw_lines[line_index]  
+                question_line = raw_lines[line_index + 1]  
+                choice_lines = raw_lines[line_index + 2:line_index + 6]  
+                answer_line = raw_lines[line_index + 6] 
