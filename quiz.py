@@ -23,4 +23,15 @@ class Quiz:
 
             user_choice_index = ord(user_letter) - ord('A')  
             user_choice = question_data["choices"][user_choice_index]  
+            correct_choice = question_data["answer"]
+
+            if user_choice == correct_choice:  
+                self.console.print("[bold green]✅ Correct! Good job![/bold green]\n")
+                score += 1
+            else:
+                correct_index = question_data["choices"].index(correct_choice)  
+                correct_letter = chr(correct_index + ord('A'))  
+                self.console.print(f"[bold red]❌ Wrong! Correct Answer: {correct_letter}. {correct_choice}[/bold red]\n")
+
+
 
