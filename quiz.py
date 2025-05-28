@@ -33,5 +33,10 @@ class Quiz:
                 correct_letter = chr(correct_index + ord('A'))  
                 self.console.print(f"[bold red]❌ Wrong! Correct Answer: {correct_letter}. {correct_choice}[/bold red]\n")
 
+        answered = question_number + 1 if user_letter != "Q" else question_number  
+        self.console.rule("[bold cyan]Quiz Finished![/bold cyan]")  
+        self.console.print(f"[bold magenta]🔥 Final Score: {score}/{answered}[/bold magenta]") 
+        
+
 
 
