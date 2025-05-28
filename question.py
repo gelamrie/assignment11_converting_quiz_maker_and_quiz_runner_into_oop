@@ -5,4 +5,4 @@ class Question:
         self.category = ""
         self.question = ""
         self.choices_dictionary = {}
-        
+        self.correct_answer = ""
