@@ -26,4 +26,6 @@ class QuestionLoader:
                 question_text = question_line  
                 choices = [line[3:].strip() for line in choice_lines] 
 
-                
+                correct_letter = answer_line.split(":", 1)[1].strip().upper()  
+                correct_index = ord(correct_letter) - ord('A')  
+                correct_choice = choices[correct_index]  
