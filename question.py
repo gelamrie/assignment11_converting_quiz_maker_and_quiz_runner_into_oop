@@ -1,4 +1,5 @@
 from colorama import Fore  
 
-class Question: 
-    
+class Question:
+    def __init__(self):
+        self.category = ""
