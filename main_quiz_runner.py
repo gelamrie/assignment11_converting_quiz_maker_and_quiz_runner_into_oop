@@ -21,4 +21,13 @@ class MainQuizRunner:
         if not file_path:
             self.console.print("[bold red]❌ No file selected. Exiting.[/bold red]")  
             return
+        
+        self.console.print(f"[bold cyan]📂 Loading file:[/bold cyan] {file_path}")
+
+        try:
+            questions = self.question_loader.load_questions_from_text(file_path)  
+            self.console.print(f"[bold green]📚 {len(questions)} questions loaded. Let's go![/bold green]\n")
+            self.quiz.start_quiz(questions) 
+        except Exception as error:
+            self.console.print(f"[bold red]❌ Error: {error}[/bold red]")  
 
