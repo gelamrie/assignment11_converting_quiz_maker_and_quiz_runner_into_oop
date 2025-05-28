@@ -17,4 +17,8 @@ class MainQuizRunner:
             "\n🎉 Welcome to the Quiz Game! Test your knowledge and have fun!\n", delay=0.05
         )
 
-        
+        file_path = self.file_chooser.choose_file()  
+        if not file_path:
+            self.console.print("[bold red]❌ No file selected. Exiting.[/bold red]")  
+            return
+
