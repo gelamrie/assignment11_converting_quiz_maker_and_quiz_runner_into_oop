@@ -15,3 +15,6 @@ class Question:
 
         for letter in ['a', 'b', 'c', 'd']:     
             self.choices_dictionary[letter] = input(Fore.BLUE + f"Choice ({letter}): ")
+
+        while True:                               
+            self.correct_answer = input(Fore.GREEN + "Which one is the correct answer? (a/b/c/d): ")
