@@ -21,3 +21,6 @@ class Quiz:
                 self.console.print("[bold cyan]👋 You chose to quit the quiz early.[/bold cyan]\n")
                 break
 
+            user_choice_index = ord(user_letter) - ord('A')  
+            user_choice = question_data["choices"][user_choice_index]  
+
