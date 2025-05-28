@@ -36,3 +36,6 @@ class QuestionLoader:
                     "choices": choices,
                     "answer": correct_choice
                 })
+            
+            except Exception as error:  
+                self.console.print(f"[bold red]⚠ Malformed block at line {line_index + 1}: {error}[/bold red]")
