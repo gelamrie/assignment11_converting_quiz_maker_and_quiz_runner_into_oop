@@ -21,3 +21,9 @@ class QuestionLoader:
                 question_line = raw_lines[line_index + 1]  
                 choice_lines = raw_lines[line_index + 2:line_index + 6]  
                 answer_line = raw_lines[line_index + 6] 
+
+                category = category_line.split(":", 1)[1].strip()  
+                question_text = question_line  
+                choices = [line[3:].strip() for line in choice_lines] 
+
+                
