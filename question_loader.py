@@ -29,3 +29,10 @@ class QuestionLoader:
                 correct_letter = answer_line.split(":", 1)[1].strip().upper()  
                 correct_index = ord(correct_letter) - ord('A')  
                 correct_choice = choices[correct_index]  
+
+                question_list.append({  
+                    "category": category,
+                    "question": question_text,
+                    "choices": choices,
+                    "answer": correct_choice
+                })
