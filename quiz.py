@@ -12,3 +12,8 @@ class Quiz:
     def start_quiz(self, questions):  
         score = 0  
         random.shuffle(questions)  
+
+        for question_number, question_data in enumerate(questions):  
+            self.question_displayer.display_question(question_data, question_number)
+            user_letter = self.answer_prompt.prompt_user_for_answer()
+
