@@ -9,3 +9,9 @@ class MainQuizMaker:
 
         file_name = input(Fore.LIGHTCYAN_EX + "Enter the file name to save your quiz (e.g., myquiz.txt): ").strip()
         question_manager = QuestionManager(file_name)
+
+        while True:                              
+            question_manager.collect_and_save_question()
+            add_more_questions = input(Fore.CYAN + "Add another question? (y/n): ").strip().lower()
+            if add_more_questions != 'y':
+                break
